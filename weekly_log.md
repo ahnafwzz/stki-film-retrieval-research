@@ -49,8 +49,11 @@ Catatan progres proyek CineMatch per tahap. Setiap tahap diberi tanggal dan dike
 - Subset 500 baris pertama bukan sampel acak, sehingga hasil eksperimen tidak digeneralisasi ke seluruh dataset TMDB.
 - Sinopsis yang pendek membatasi informasi yang bisa dicocokkan dan dicatat sebagai salah satu kategori penyebab kegagalan pada analisis di Tahap 6.
 
-### Rencana Tahap 2
+## Tahap 2: Pengembangan Modul Preprocessing Teks
+**Target:** Membangun dan menguji *pipeline text preprocessing* untuk eksperimen komparatif.
+**Status:** Selesai ✅
 
-- Membuat `src/preprocess.py` dengan fungsi untuk skenario S1 sampai S4 (case folding, hapus tanda baca dan angka, stopword removal, stemming Porter).
-- Menangani apostrof tanpa menyisakan token satu huruf.
-- Mendokumentasikan uji coba pada beberapa sinopsis di `notebooks/02_preprocessing.ipynb`.
+**Rincian Pekerjaan:**
+1. **Modul Modular:** Membuat `src/preprocess.py` yang berisi fungsi `preprocess_text`. Fungsi ini merangkum empat skenario perlakuan teks (S1: teks mentah, S2: *case folding* + pembersihan, S3: S2 + *stopword removal*, S4: S3 + *stemming*).
+2. **Penanganan Kasus Khusus:** Menambahkan *regex* khusus di dalam fungsi untuk menangani karakter *apostrophe* (agar kata bernada kepemilikan tidak terpecah) dan logika pembuangan token berjumlah tunggal (satu karakter).
+3. **Pengujian Fungsional:** Menguji modul menggunakan Jupyter Notebook (`notebooks/02_preprocessing.ipynb`) dan berhasil memverifikasi *output* yang sesuai untuk setiap skenario, baik pada sampel kalimat manual maupun pada sampel korpus sinopsis film Avatar.

@@ -11,7 +11,7 @@ Proyek ini merupakan pemenuhan Tugas Akhir Mata Kuliah STKI. Fokusnya adalah men
 | Tahap | Kegiatan | Status |
 |-------|----------|--------|
 | 1 | Inisiasi proyek, dataset, dan EDA | ✅ Selesai |
-| 2 | Modul `preprocess.py` (S1 sampai S4) | ⏳ Belum |
+| 2 | Modul `preprocess.py` (S1 sampai S4) | ✅ Selesai |
 | 3 | 30 film target dan 30 kueri uji | ⏳ Belum |
 | 4 | TF-IDF, cosine similarity, dan ranking | ⏳ Belum |
 | 5 | Eksperimen S1 sampai S4 | ⏳ Belum |
@@ -44,11 +44,11 @@ stki-film-retrieval-research/
 │   └── queries.csv               ⏳ 30 kueri uji dan film targetnya (Tahap 3)
 ├── notebooks/
 │   ├── 01_eda.ipynb              ✅ Exploratory Data Analysis
-│   ├── 02_preprocessing.ipynb    ⏳ Uji tahapan preprocessing (Tahap 2)
+│   ├── 02_preprocessing.ipynb    ✅ Uji tahapan preprocessing
 │   ├── 03_tfidf_cosine.ipynb     ⏳ TF-IDF dan cosine similarity (Tahap 4)
 │   └── 04_evaluasi.ipynb         ⏳ Hit Rate@5, MRR, dan analisis (Tahap 5-6)
 ├── src/
-│   └── preprocess.py             ⏳ Fungsi pembersihan teks (Tahap 2)
+│   └── preprocess.py             ✅ Fungsi pembersihan teks
 ├── models/
 │   ├── tfidf_vectorizer.pkl      ⏳ Vectorizer skenario terbaik (Tahap 6)
 │   └── tfidf_matrix.pkl          ⏳ Matriks dokumen skenario terbaik (Tahap 6)
